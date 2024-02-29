@@ -16,10 +16,10 @@ struct TestConfig {
     static let wssMainnetUrl = "wss://mainnet.infura.io/ws/v3/b2f4b3f635d8425c96854c3d28ba6bb0"
 
     // An EOA with some Ether, so that we can test sending transactions (pay for gas). Set by CI
-//    static let privateKey = "SET_YOUR_KEY_HERE"
+    static let privateKey = "0x1a55418da01124db9bf94f237d84b34d3f301d82e693f5736d5834ff33fa1dc2"
 
     // This is the expected public key (address) from the above private key
-//    static let publicKey = "SET_YOUR_PUBLIC_ADDRESS_HERE"
+    static let publicKey = "0x9Ca4886c6e1CA3Df41038aF1361F2feE45275953"
 
     // A test ERC20 token contract (UNI)
     static let erc20Contract = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"

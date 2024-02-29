@@ -14,7 +14,7 @@ public protocol ABIRevertError: ABIFunctionEncodable {
 
 extension JSONRPCErrorDetail {
     public func decode<T: ABIRevertError>(error: T) throws -> [ABIDecoder.DecodedValue] {
-        guard let data = data?.web3.hexData else {
+        guard let data = data?.data?.web3.hexData else {
             throw ABIError.invalidType
         }
 

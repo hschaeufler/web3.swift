@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum EthereumSignerError: Error {
+public enum EthereumSignerError: Error {
     case emptyRawTransaction
     case unknownError
 }

@@ -32,12 +32,12 @@ public struct JSONRPCResult<T: Decodable>: Decodable {
 public struct JSONRPCErrorDetail: Decodable, Equatable, CustomStringConvertible {
     public var code: Int
     public var message: String
-    public var data: String?
+    public var data: JSONRPCErrorData?
 
     public init(
         code: Int,
         message: String,
-        data: String?
+        data: JSONRPCErrorData?
     ) {
         self.code = code
         self.message = message
@@ -48,6 +48,12 @@ public struct JSONRPCErrorDetail: Decodable, Equatable, CustomStringConvertible 
         "Code: \(code)\nMessage: \(message)"
     }
 }
+
+public struct JSONRPCErrorData: Decodable, Equatable  {
+    public var message: String
+    public var data: String?
+}
+
 
 public struct JSONRPCErrorResult: Decodable {
     public var id: Int
